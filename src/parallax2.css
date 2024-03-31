@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+    top:0;
+    left: 0;
+
+}
+.head h1 {
+    font-size: 40px;
+    color: white;
+}
+.head nav {
+    display: flex;
+    justify-content: flex-start;
+    margin-left:50px ;
+    gap: 30px;
+    padding: 0 5%;
+}
+
+.head nav a {
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 99px;
+    transition: 0.3s;
+    color: #359381;
+}
+.head nav a.active {
+    color: white;
+    background: #359381;
+}
+.head nav a:hover {
+    background: #359381;
+    color: white;
+}
+/* .head nav:hover > a:not(:hover) {
+    background: none;
+} */
+
+.body2 {
+    display: flex;
+    min-height: 100vh;
+    background: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.body2 img {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    pointer-events: none;
+}
+
+.body2 .text {
+    font-family: "Abril Fatface", serif;
+    font-weight: 1000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 99px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.about2 {
+    padding: 50px;
+    background: #003329;
+    color: white;
+    position: relative;
+    z-index: 100;
+}
+.about2 h1 {
+    font-size: 45px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+
+}
+
+.leaf {
+    position: absolute;
+    top: 0px; /* Adjust this value to move the leaf up or down */
+  }

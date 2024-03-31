@@ -1,0 +1,412 @@
+/* shadcl */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 47.4% 11.2%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 47.4% 11.2%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 215 20.2% 65.1%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 224 71% 4%;
+    --foreground: 213 31% 91%;
+
+    --muted: 223 47% 11%;
+    --muted-foreground: 215.4 16.3% 56.9%;
+
+    --accent: 216 34% 17%;
+    --accent-foreground: 210 40% 98%;
+
+    --popover: 224 71% 4%;
+    --popover-foreground: 215 20.2% 65.1%;
+
+    --border: 216 34% 17%;
+    --input: 216 34% 17%;
+
+    --card: 224 71% 4%;
+    --card-foreground: 213 31% 91%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 1.2%;
+
+    --secondary: 222.2 47.4% 11.2%;
+    --secondary-foreground: 210 40% 98%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 216 34% 17%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+
+
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.logo img{
+  float: left;
+  width: 50px;
+  height:30px;
+  }
+
+.App {
+  height: 100vh;
+  text-align: centre;
+  background-size: cover;
+  background-image: url('https://r4.wallpaperflare.com/wallpaper/97/833/155/mountains-firewatch-green-forest-wallpaper-5c0e3259b4dddc065048fc083c336564.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.menu {
+  display: flex;
+  justify-content: flex-end; /* Move items to the extreme right */
+  align-items: center; /* Vertically center items */
+  width: 100%; /* Ensure the menu takes up the full width */
+  background-color: rgba(200,230,144,255);
+}
+
+.company-name{
+  font-size: 30px;
+  font-family: "Abril Fatface", serif;
+  font-weight: 1000;
+  font-style: normal;
+  /*background-color: rgba(214,243,239,255);*/
+}
+.log{
+  background-color: rgba(200,230,144,255);
+}
+
+.doctor{
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+
+  transition: box-shadow 0.3s ease; /* Smooth transition for box-shadow */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light box shadow for the glassy effect */
+}
+.doctor:hover{
+  background-color: rgba(255, 255, 255, 0.8);
+
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* antd override */
+input{
+  border-radius: 2px !important;
+  border: 1px solid gray !important;
+  height: 40px !important;
+}
+input:focus, .ant-picker {
+  outline: none !important;
+  box-shadow: none !important;
+  border: 1px solid gray !important;
+
+}
+label{
+  font-size: 16px !important;
+  color: black !important;
+}
+
+.ant-form-item{
+  margin: 10px 0 !important;
+}
+
+.ant-picker-input input{
+  border: none !important;
+}
+
+.ant-picker{
+  height: 40px !important;
+  border-radius: 2px !important;
+  border: 1px solid gray !important;
+  height: 40px !important;
+}
+/* common styling */
+
+.spinner-parent{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:rgba(0, 0, 0, 0.543);
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999999;
+}
+
+.spinner-border{
+  width: 5rem; /*1rem = 16px*/
+  height: 5rem;
+  color: white;
+}
+
+.page-title{
+  font-size: 25px;
+  color: rgba(0, 0, 0, 0.761);
+  font-weight: bold;
+}
+
+.card-title{
+  padding-left: 10px;
+  display: block;
+  width: 100%;
+  font-size: 22px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.672);
+}
+
+.normal text{
+  font-size: 1rem;
+}
+.card{
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+  border-radius: 5px !important;
+  padding: 9px !important;
+  margin-bottom: 10px;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 2px rgb(49, 104, 190);
+  transition: box-shadow 0.3s ease; 
+}
+.card:hover {
+  box-shadow: 0 0 10px rgb(49, 104, 190); /* Change box shadow on hover */
+}
+
+.primary-button{
+  /* background-color:rgba(222,252,204,255)!important; */
+  /* border-color: aquamarine !important; */
+  /* background-color: rgba(39, 60, 83) !important; */
+  background-color: rgb(49, 104, 190) !important;
+  height: 40px !important;
+  width: 100% !important;
+  color: white !important;
+  font-size: 16px !important;
+  font-weight: bold;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+ .primary-button2{ /*doctor-apply */
+  background-color:rgba(222,252,204,0.85)!important;
+  border-color: aquamarine !important;
+  height: 40px !important;
+  width: 100% !important;
+  color: black !important;
+  font-size: 22px !important;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+    width: max-content !important;
+}
+
+
+ .anchor{
+  color: black !important;
+  text-decoration: underline;
+  font-size: 16px !important;
+  cursor: pointer;
+ }
+ .anchor:hover{
+  text-decoration: underline !important;
+ }
+
+
+.authentication{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-image: url(./assets/images/2838575.jpg);
+  /* background-image: url(./assets/images/login:signin.jpg); */
+  /* background-image: url('https://images5.alphacoders.com/132/1323577.png');  */
+  background-repeat: no-repeat; /* Prevent the background image from repeating */
+  background-size: cover; /* Cover the entire container with the background image */
+
+}
+
+.authentication-form{
+  width: 400px;
+
+  background-color: rgba(255, 255, 255, 0.6); /* Add a semi-transparent white background for the form */
+  border-radius: 8px; /* Add rounded corners to the form container */
+  padding: 20px; /* Add padding to the form container */
+
+  transition: box-shadow 0.3s ease; /* Smooth transition for box-shadow */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Light box shadow for the glassy effect */
+}
+
+.authentication-form:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Increase box shadow on hover for a glassy effect */
+}
+
+.authentication .card-title{
+  /* background-color:rgba(140, 196, 109, 255); */
+  /* background-color: rgba(26,41,55); */
+  background-color: rgb(49, 104, 190);
+  color: white !important;
+  font-size: 1.5rem;
+  font-weight: bold;
+  max-width: max-content !important;
+  padding: 7px 15px;
+  margin-left: -45px;
+  border-bottom-left-radius: 15px;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* parallax */
+.parallax{
+  height: 100vh;
+  text-align: centre;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background: linear-gradient(to top, #D2E2FB 30%, #86A8DB); /* Create a vertical gradient that starts at light blue*/
+}
+
+.Parallaxmenu {
+  display: flex;
+  justify-content: flex-end; /* Move items to the extreme right */
+  align-items: center; /* Vertically center items */
+  width: 100%; /* Ensure the menu takes up the full width */
+  background-color: #86A8DB;
+  /*background: linear-gradient(to top, #D2E2FB 30%, #86A8DB); /* Create a vertical gradient that starts at light blue*/
+}
+
+.Parallaxlog{
+  background-color: #86A8DB;
+}
+
+/*
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  padding: 0 5%;
+  position: absolute;
+  width: 100%;
+  z-index: 100;
+}
+header h1 {
+  font-size: 40px;
+  color: white;
+}
+header nav {
+  display: flex;
+  gap: 30px;
+}
+header nav a {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 99px;
+  transition: 0.3s;
+  color: white;
+}
+header nav a.active {
+  background: #5247B9;
+}
+header nav a:hover {
+  background: #5247B9;
+}
+header nav:hover > a:not(:hover) {
+  background: none;
+}
+
+.home {
+  display: flex;
+  height: 100dvh;
+  background: linear-gradient(to top, #D2E2FB 30%, #86A8DB);
+  position: relative;
+  overflow: hidden;
+}
+
+.home img {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  pointer-events: none;
+}
+
+.home .title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 80px;
+  text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+}
+
+.about {
+  padding: 50px;
+  background: #3B3291;
+  color: white;
+  position: relative;
+  z-index: 100;
+}
+.about h1 {
+  font-size: 40px;
+} */
